@@ -8,7 +8,8 @@
     "ovfx-validate": "index.js"
   },
   "scripts": {
-    "test": "node index.js ../../examples/*.ovfx.json"
+    "test": "node --test test.js",
+    "validate:examples": "node index.js ../../examples/*.ovfx.json"
   },
   "license": "Apache-2.0",
   "dependencies": {

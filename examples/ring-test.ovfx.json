@@ -1,5 +1,5 @@
 {
-  "ovfxVersion": "0.1.0",
+  "ovfxVersion": "0.2.0",
   "id": "7e2a4c1d-9b8c-4e5f-a1b2-c3d4e5f6a7b8",
   "createdAt": "2026-04-15T13:15:00Z",
   "test": {
@@ -8,13 +8,18 @@
     "extendedField": false
   },
   "calibration": {
-    "viewingDistanceCm": 50,
-    "pixelsPerDegree": 12.0,
-    "screenWidthPx": 1920,
-    "screenHeightPx": 1080,
-    "fixationOffsetPx": -384,
     "maxEccentricityDeg": 70,
-    "brightnessFloor": 0.04
+    "setup": {
+      "type": "screen",
+      "screen": {
+        "viewingDistanceCm": 50,
+        "pixelsPerDegree": 12.0,
+        "screenWidthPx": 1920,
+        "screenHeightPx": 1080,
+        "fixationOffsetPx": -384,
+        "brightnessFloor": 0.04
+      }
+    }
   },
   "stimuli": [
     { "key": "V4e",   "sizeDeg": 1.73, "intensity": 1.00 },

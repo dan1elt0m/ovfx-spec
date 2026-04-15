@@ -18,8 +18,12 @@ jobs:
 
       - name: Install validator dependencies
         working-directory: tools/validate-cli
-        run: npm ci
+        run: npm install
+
+      - name: Run validator unit tests
+        working-directory: tools/validate-cli
+        run: node --test test.js
 
       - name: Validate every example against the schema
         working-directory: tools/validate-cli
-        run: node index.js ../../examples/*.ovfx.json
+        run: npm run validate:examples
