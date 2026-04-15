@@ -4,6 +4,7 @@ Each spec version has a corresponding JSON Schema (Draft 2020-12). Schemas are v
 
 | Version  | Schema                                                 |
 | -------- | ------------------------------------------------------ |
+| 0.3.0    | [`v0.3.0/ovfx.schema.json`](v0.3.0/ovfx.schema.json)   |
 | 0.2.0    | [`v0.2.0/ovfx.schema.json`](v0.2.0/ovfx.schema.json)   |
 | 0.1.0    | [`v0.1.0/ovfx.schema.json`](v0.1.0/ovfx.schema.json)   |
 

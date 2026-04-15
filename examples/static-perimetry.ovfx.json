@@ -1,14 +1,16 @@
 {
-  "ovfxVersion": "0.2.0",
+  "ovfxVersion": "0.3.0",
   "id": "5c8d1e2a-3f4b-4a5c-9d8e-7f6a5b4c3d2e",
   "createdAt": "2026-04-15T11:30:00Z",
   "test": {
     "type": "static",
     "eye": "left",
-    "extendedField": false
+    "extendedField": false,
+    "pattern": "24-2",
+    "strategy": "SITA-standard",
+    "durationSeconds": 360
   },
   "calibration": {
-    "maxEccentricityDeg": 70,
     "setup": {
       "type": "screen",
       "screen": {
@@ -17,6 +19,7 @@
         "screenWidthPx": 1920,
         "screenHeightPx": 1080,
         "fixationOffsetPx": 384,
+        "maxEccentricityDeg": 70,
         "brightnessFloor": 0.04
       }
     }
@@ -29,9 +32,9 @@
     { "key": "I2e",   "sizeDeg": 0.11, "intensity": 0.10 }
   ],
   "points": [
-    { "stimulusKey": "V4e", "meridianDeg": 15,  "eccentricityDeg": 65.0, "detected": true,  "responseTimeMs": 410 },
-    { "stimulusKey": "V4e", "meridianDeg": 45,  "eccentricityDeg": 60.5, "detected": true,  "responseTimeMs": 380 },
-    { "stimulusKey": "V4e", "meridianDeg": 75,  "eccentricityDeg": 50.0, "detected": true,  "responseTimeMs": 395 },
+    { "stimulusKey": "V4e", "meridianDeg": 15,  "eccentricityDeg": 65.0, "detected": true,  "responseTimeMs": 410, "sensitivityDb": 28 },
+    { "stimulusKey": "V4e", "meridianDeg": 45,  "eccentricityDeg": 60.5, "detected": true,  "responseTimeMs": 380, "sensitivityDb": 30 },
+    { "stimulusKey": "V4e", "meridianDeg": 75,  "eccentricityDeg": 50.0, "detected": true,  "responseTimeMs": 395, "sensitivityDb": 27 },
     { "stimulusKey": "V4e", "meridianDeg": 105, "eccentricityDeg": 55.5, "detected": true,  "responseTimeMs": 405 },
     { "stimulusKey": "V4e", "meridianDeg": 135, "eccentricityDeg": 62.0, "detected": true,  "responseTimeMs": 388 },
     { "stimulusKey": "V4e", "meridianDeg": 165, "eccentricityDeg": 64.0, "detected": true,  "responseTimeMs": 400 },
@@ -54,6 +57,12 @@
     { "stimulusKey": "I2e",   "meridianDeg": 180, "eccentricityDeg": 16.0, "detected": true,  "responseTimeMs": 502 },
     { "stimulusKey": "I2e",   "meridianDeg": 270, "eccentricityDeg": 15.5, "detected": true,  "responseTimeMs": 495 }
   ],
+  "reliability": {
+    "falsePositiveRate": 0.02,
+    "falseNegativeRate": 0.05,
+    "fixationLossRate": 0.08,
+    "fixationMethod": "blind-spot"
+  },
   "software": {
     "name": "Visual Field Check",
     "version": "1.0.0",

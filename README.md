@@ -1,6 +1,6 @@
 # OVFX — Open Visual Field eXchange
 
-[![Spec version](https://img.shields.io/badge/spec-v0.2.0--draft-blue)](spec/v0.2.0.md)
+[![Spec version](https://img.shields.io/badge/spec-v0.3.0--draft-blue)](spec/v0.3.0.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/spec%20license-CC%20BY%204.0-lightgrey)](LICENSE)
 [![Code license](https://img.shields.io/badge/code%20license-Apache%202.0-blue)](LICENSE-CODE)
 
@@ -22,12 +22,17 @@ OVFX fills the gap with one small, well-specified JSON schema that covers every 
 
 ```json
 {
-  "ovfxVersion": "0.2.0",
+  "ovfxVersion": "0.3.0",
   "id": "1f5b2e2c-2cd5-4d29-9c6a-83a51c4f8aaa",
   "createdAt": "2026-04-15T10:00:00Z",
-  "test": { "type": "kinetic", "eye": "right" },
+  "test": {
+    "type": "kinetic",
+    "eye": "right",
+    "pattern": "Goldmann",
+    "strategy": "kinetic",
+    "durationSeconds": 720
+  },
   "calibration": {
-    "maxEccentricityDeg": 70,
     "reactionTimeMs": 250,
     "setup": {
       "type": "screen",
@@ -37,6 +42,7 @@ OVFX fills the gap with one small, well-specified JSON schema that covers every 
         "screenWidthPx": 1920,
         "screenHeightPx": 1080,
         "fixationOffsetPx": -200,
+        "maxEccentricityDeg": 70,
         "brightnessFloor": 0.04
       }
     }
@@ -49,7 +55,12 @@ OVFX fills the gap with one small, well-specified JSON schema that covers every 
     { "stimulusKey": "V4e", "meridianDeg": 0,  "eccentricityDeg": 78.4, "detected": true,  "responseTimeMs": 312 },
     { "stimulusKey": "V4e", "meridianDeg": 30, "eccentricityDeg": 75.1, "detected": true,  "responseTimeMs": 298 },
     { "stimulusKey": "V4e", "meridianDeg": 60, "eccentricityDeg": 72.8, "detected": false }
-  ]
+  ],
+  "reliability": {
+    "falsePositiveRate": 0.02,
+    "fixationLossRate": 0.05,
+    "fixationMethod": "blind-spot"
+  }
 }
 ```
 
@@ -71,7 +82,7 @@ docs/         Design rationale and supporting material
 
 OVFX uses semantic versioning at the spec level. A **MAJOR** bump means a backward-incompatible change to the schema. **MINOR** bumps add new optional fields or test types. **PATCH** bumps are clarifications and corrections that don't change the schema. Implementations should reject documents whose `ovfxVersion` is from a newer **MAJOR** than they support.
 
-The current spec version is **0.2.0 (draft)**. The format is not yet considered stable; feedback on the draft is welcome.
+The current spec version is **0.3.0 (draft)**. The format is not yet considered stable; feedback on the draft is welcome.
 
 ## Status
 
@@ -79,8 +90,8 @@ OVFX is currently a **public draft**. The schema may change before 1.0.0 based o
 
 ## Get involved
 
-- Read the [specification](spec/v0.2.0.md)
-- Browse the [JSON Schema](schema/v0.2.0/ovfx.schema.json)
+- Read the [specification](spec/v0.3.0.md)
+- Browse the [JSON Schema](schema/v0.3.0/ovfx.schema.json)
 - Try the [validator CLI](tools/validate-cli/)
 - Open an [RFC issue](.github/ISSUE_TEMPLATE/) to propose a change
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before sending a PR

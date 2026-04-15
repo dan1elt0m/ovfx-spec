@@ -2,6 +2,28 @@
 
 All notable changes to OVFX are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) at the spec level.
 
+## [0.3.0] — 2026-04-15
+
+Moves `maxEccentricityDeg` into each `setup.<type>` sub-object (it's a property of the testing hardware, not a device-agnostic measurement) and adds optional fields for clinical interoperability with DICOM Supplement 80, the visualFields R package, and clinical HFA / Octopus exports. Point data is unchanged.
+
+### Changed
+
+- **Breaking:** `calibration.maxEccentricityDeg` moved into each setup sub-object. `calibration.setup.screen.maxEccentricityDeg`, `calibration.setup.bowl.maxEccentricityDeg`, and `calibration.setup.vr.maxEccentricityDeg` are now **required** for their respective setup types. The field is no longer accepted at the top of `calibration`.
+
+### Added
+
+- `test.pattern` (optional) — clinical grid name like `"24-2"`, `"30-2"`, `"10-2"`, `"Goldmann"`, `"Esterman"`.
+- `test.strategy` (optional) — testing strategy like `"threshold"`, `"SITA-standard"`, `"SITA-fast"`, `"screening"`, `"kinetic"`, `"ring-sector"`.
+- `test.durationSeconds` (optional) — total wall-clock duration of the test.
+- `points[].sensitivityDb` (optional) — threshold sensitivity in decibels, for static threshold perimetry. Unlocks faithful representation of Humphrey / Octopus threshold data.
+- `reliability` top-level object (optional) with `falsePositiveRate`, `falseNegativeRate`, `fixationLossRate`, and `fixationMethod` — the classical HFA reliability triad plus a free-form fixation-monitoring method string.
+- Validator registry now includes the 0.3.0 schema; documents default to 0.3.0 when unversioned.
+- Additional unit tests covering every new field.
+
+### Migration from 0.2.0
+
+Mechanical rewrite: move `calibration.maxEccentricityDeg` into `calibration.setup.screen.maxEccentricityDeg` (for screen tests) and bump `ovfxVersion` from `"0.2.0"` to `"0.3.0"`. No point data changes. All new 0.3.0 fields are optional; existing 0.2.0 producers can ignore them.
+
 ## Errata — 2026-04-15
 
 - **Schema `$id` URL corrected.** Both `schema/v0.1.0/ovfx.schema.json` and `schema/v0.2.0/ovfx.schema.json` originally used `https://ovfx.org/...` as their `$id`, but that domain is not owned by this project. Both files were patched to point at the GitHub raw URL instead (`https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/...`). The `$id` is a stable identifier and is not semantically part of the schema; no consumer behaviour changes. Applied in-place to both pre-adoption drafts with no version bump.
