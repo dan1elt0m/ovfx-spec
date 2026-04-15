@@ -2,6 +2,10 @@
 
 All notable changes to OVFX are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) at the spec level.
 
+## Errata — 2026-04-15
+
+- **Schema `$id` URL corrected.** Both `schema/v0.1.0/ovfx.schema.json` and `schema/v0.2.0/ovfx.schema.json` originally used `https://ovfx.org/...` as their `$id`, but that domain is not owned by this project. Both files were patched to point at the GitHub raw URL instead (`https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/...`). The `$id` is a stable identifier and is not semantically part of the schema; no consumer behaviour changes. Applied in-place to both pre-adoption drafts with no version bump.
+
 ## [0.2.0] — 2026-04-15
 
 Restructures `calibration` to remove the screen-specific bias of 0.1.0. The core data model (points in polar degrees of visual angle) is unchanged, so converting a 0.1.0 document to 0.2.0 is a mechanical rewrite of the `calibration` object with no point data changes. See `spec/v0.2.0.md` §10 for the migration.
