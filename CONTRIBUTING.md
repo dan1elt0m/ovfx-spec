@@ -42,7 +42,7 @@ Each spec version lives at a stable URL under `spec/<version>.md` and `schema/<v
 ## Local development
 
 ```bash
-git clone https://github.com/dan1elt0m/ovfx-spec
+git clone https://github.com/openperimetry/ovfx-spec
 cd ovfx-spec/tools/validate-cli
 npm install
 node index.js ../../examples/*.ovfx.json

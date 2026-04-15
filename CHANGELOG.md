@@ -26,7 +26,8 @@ Mechanical rewrite: move `calibration.maxEccentricityDeg` into `calibration.setu
 
 ## Errata — 2026-04-15
 
-- **Schema `$id` URL corrected.** Both `schema/v0.1.0/ovfx.schema.json` and `schema/v0.2.0/ovfx.schema.json` originally used `https://ovfx.org/...` as their `$id`, but that domain is not owned by this project. Both files were patched to point at the GitHub raw URL instead (`https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/...`). The `$id` is a stable identifier and is not semantically part of the schema; no consumer behaviour changes. Applied in-place to both pre-adoption drafts with no version bump.
+- **Repository moved to the `openperimetry` GitHub organization.** All schema `$id` URLs (`schema/v0.1.0`, `schema/v0.2.0`, `schema/v0.3.0`) were patched in place from `https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/...` to `https://raw.githubusercontent.com/openperimetry/ovfx-spec/main/schema/...`. The `$id` is a stable identifier and is not semantically part of the schema; no consumer behaviour changes. GitHub will redirect the old URL indefinitely, but new producers should emit documents that reference the new URL. Applied in-place to all pre-adoption drafts with no version bump.
+- **Schema `$id` URL corrected.** Both `schema/v0.1.0/ovfx.schema.json` and `schema/v0.2.0/ovfx.schema.json` originally used `https://ovfx.org/...` as their `$id`, but that domain is not owned by this project. Both files were patched to point at the GitHub raw URL instead (`https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/...`, subsequently updated to the `openperimetry` org — see above). The `$id` is a stable identifier and is not semantically part of the schema; no consumer behaviour changes. Applied in-place to both pre-adoption drafts with no version bump.
 
 ## [0.2.0] — 2026-04-15
 

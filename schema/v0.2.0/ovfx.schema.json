@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/dan1elt0m/ovfx-spec/main/schema/v0.2.0/ovfx.schema.json",
+  "$id": "https://raw.githubusercontent.com/openperimetry/ovfx-spec/main/schema/v0.2.0/ovfx.schema.json",
   "title": "OVFX — Open Visual Field eXchange",
   "description": "JSON Schema for OVFX v0.2.0 perimetry result documents. See spec/v0.2.0.md for the normative specification.",
   "type": "object",

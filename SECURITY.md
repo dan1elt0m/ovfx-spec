@@ -6,7 +6,7 @@ OVFX is a data format specification. The specification itself is not "secure" or
 
 If you find an issue in the **reference tooling** under `tools/` (for example the validator CLI) that has security implications, please open a private security advisory on GitHub:
 
-<https://github.com/dan1elt0m/ovfx-spec/security/advisories/new>
+<https://github.com/openperimetry/ovfx-spec/security/advisories/new>
 
 Please do not open a public issue for security problems. We will acknowledge receipt within 7 days and aim to publish a fix within 30 days.
 
