@@ -1,0 +1,65 @@
+{
+  "ovfxVersion": "0.1.0",
+  "id": "9b3a8b46-7ee2-4b9b-9f6c-1a2d3e4f5a6b",
+  "createdAt": "2026-04-15T10:00:00Z",
+  "test": {
+    "type": "kinetic",
+    "eye": "right",
+    "extendedField": false
+  },
+  "calibration": {
+    "viewingDistanceCm": 50,
+    "pixelsPerDegree": 12.0,
+    "screenWidthPx": 1920,
+    "screenHeightPx": 1080,
+    "fixationOffsetPx": -384,
+    "maxEccentricityDeg": 70,
+    "brightnessFloor": 0.04,
+    "reactionTimeMs": 280
+  },
+  "stimuli": [
+    { "key": "V4e",   "sizeDeg": 1.73, "intensity": 1.00, "color": "#60a5fa" },
+    { "key": "III4e", "sizeDeg": 0.43, "intensity": 1.00, "color": "#34d399" },
+    { "key": "III2e", "sizeDeg": 0.43, "intensity": 0.10, "color": "#a78bfa" },
+    { "key": "I4e",   "sizeDeg": 0.11, "intensity": 1.00, "color": "#fb923c" },
+    { "key": "I2e",   "sizeDeg": 0.11, "intensity": 0.10, "color": "#f472b6" }
+  ],
+  "points": [
+    { "stimulusKey": "V4e",   "meridianDeg": 0,   "eccentricityDeg": 78.4, "rawEccentricityDeg": 80.5, "detected": true, "responseTimeMs": 312 },
+    { "stimulusKey": "V4e",   "meridianDeg": 30,  "eccentricityDeg": 75.1, "rawEccentricityDeg": 77.2, "detected": true, "responseTimeMs": 298 },
+    { "stimulusKey": "V4e",   "meridianDeg": 60,  "eccentricityDeg": 72.8, "rawEccentricityDeg": 74.5, "detected": true, "responseTimeMs": 305 },
+    { "stimulusKey": "V4e",   "meridianDeg": 90,  "eccentricityDeg": 60.2, "rawEccentricityDeg": 62.1, "detected": true, "responseTimeMs": 320 },
+    { "stimulusKey": "V4e",   "meridianDeg": 120, "eccentricityDeg": 73.5, "rawEccentricityDeg": 75.4, "detected": true, "responseTimeMs": 290 },
+    { "stimulusKey": "V4e",   "meridianDeg": 150, "eccentricityDeg": 76.8, "rawEccentricityDeg": 78.9, "detected": true, "responseTimeMs": 285 },
+    { "stimulusKey": "V4e",   "meridianDeg": 180, "eccentricityDeg": 65.0, "rawEccentricityDeg": 66.8, "detected": true, "responseTimeMs": 308 },
+    { "stimulusKey": "V4e",   "meridianDeg": 210, "eccentricityDeg": 70.3, "rawEccentricityDeg": 72.4, "detected": true, "responseTimeMs": 295 },
+    { "stimulusKey": "V4e",   "meridianDeg": 240, "eccentricityDeg": 73.6, "rawEccentricityDeg": 75.7, "detected": true, "responseTimeMs": 301 },
+    { "stimulusKey": "V4e",   "meridianDeg": 270, "eccentricityDeg": 65.4, "rawEccentricityDeg": 67.2, "detected": true, "responseTimeMs": 315 },
+    { "stimulusKey": "V4e",   "meridianDeg": 300, "eccentricityDeg": 72.9, "rawEccentricityDeg": 74.6, "detected": true, "responseTimeMs": 304 },
+    { "stimulusKey": "V4e",   "meridianDeg": 330, "eccentricityDeg": 75.7, "rawEccentricityDeg": 77.5, "detected": true, "responseTimeMs": 297 },
+
+    { "stimulusKey": "III4e", "meridianDeg": 0,   "eccentricityDeg": 64.0, "detected": true, "responseTimeMs": 322 },
+    { "stimulusKey": "III4e", "meridianDeg": 90,  "eccentricityDeg": 50.5, "detected": true, "responseTimeMs": 311 },
+    { "stimulusKey": "III4e", "meridianDeg": 180, "eccentricityDeg": 55.6, "detected": true, "responseTimeMs": 318 },
+    { "stimulusKey": "III4e", "meridianDeg": 270, "eccentricityDeg": 56.1, "detected": true, "responseTimeMs": 326 },
+
+    { "stimulusKey": "I4e",   "meridianDeg": 0,   "eccentricityDeg": 50.3, "detected": true, "responseTimeMs": 340 },
+    { "stimulusKey": "I4e",   "meridianDeg": 90,  "eccentricityDeg": 38.0, "detected": true, "responseTimeMs": 352 },
+    { "stimulusKey": "I4e",   "meridianDeg": 180, "eccentricityDeg": 42.7, "detected": true, "responseTimeMs": 348 },
+    { "stimulusKey": "I4e",   "meridianDeg": 270, "eccentricityDeg": 41.5, "detected": true, "responseTimeMs": 358 },
+
+    { "stimulusKey": "I2e",   "meridianDeg": 0,   "eccentricityDeg": 22.4, "detected": true, "responseTimeMs": 380 },
+    { "stimulusKey": "I2e",   "meridianDeg": 90,  "eccentricityDeg": 18.6, "detected": true, "responseTimeMs": 372 }
+  ],
+  "isopters": [
+    { "stimulusKey": "V4e",   "areaSqDeg": 16240.0 },
+    { "stimulusKey": "III4e", "areaSqDeg": 11050.0 },
+    { "stimulusKey": "I4e",   "areaSqDeg": 5980.0 },
+    { "stimulusKey": "I2e",   "areaSqDeg": 1300.0 }
+  ],
+  "software": {
+    "name": "Visual Field Check",
+    "version": "1.0.0",
+    "url": "https://visualfieldcheck.com"
+  }
+}

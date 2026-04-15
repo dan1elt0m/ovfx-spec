@@ -1,0 +1,48 @@
+{
+  "ovfxVersion": "0.1.0",
+  "id": "7e2a4c1d-9b8c-4e5f-a1b2-c3d4e5f6a7b8",
+  "createdAt": "2026-04-15T13:15:00Z",
+  "test": {
+    "type": "ring",
+    "eye": "right",
+    "extendedField": false
+  },
+  "calibration": {
+    "viewingDistanceCm": 50,
+    "pixelsPerDegree": 12.0,
+    "screenWidthPx": 1920,
+    "screenHeightPx": 1080,
+    "fixationOffsetPx": -384,
+    "maxEccentricityDeg": 70,
+    "brightnessFloor": 0.04
+  },
+  "stimuli": [
+    { "key": "V4e",   "sizeDeg": 1.73, "intensity": 1.00 },
+    { "key": "III4e", "sizeDeg": 0.43, "intensity": 1.00 },
+    { "key": "III2e", "sizeDeg": 0.43, "intensity": 0.10 }
+  ],
+  "points": [
+    { "stimulusKey": "V4e", "meridianDeg": 0,   "eccentricityDeg": 78.0, "detected": true, "sectorIdx": 0 },
+    { "stimulusKey": "V4e", "meridianDeg": 45,  "eccentricityDeg": 72.5, "detected": true, "sectorIdx": 1 },
+    { "stimulusKey": "V4e", "meridianDeg": 90,  "eccentricityDeg": 60.0, "detected": true, "sectorIdx": 2 },
+    { "stimulusKey": "V4e", "meridianDeg": 135, "eccentricityDeg": 70.5, "detected": true, "sectorIdx": 3 },
+    { "stimulusKey": "V4e", "meridianDeg": 180, "eccentricityDeg": 65.0, "detected": true, "sectorIdx": 4 },
+    { "stimulusKey": "V4e", "meridianDeg": 225, "eccentricityDeg": 68.0, "detected": true, "sectorIdx": 5 },
+    { "stimulusKey": "V4e", "meridianDeg": 270, "eccentricityDeg": 62.0, "detected": true, "sectorIdx": 6 },
+    { "stimulusKey": "V4e", "meridianDeg": 315, "eccentricityDeg": 71.0, "detected": true, "sectorIdx": 7 },
+
+    { "stimulusKey": "III4e", "meridianDeg": 0,   "eccentricityDeg": 60.0, "detected": true, "sectorIdx": 0 },
+    { "stimulusKey": "III4e", "meridianDeg": 45,  "eccentricityDeg": 56.0, "detected": true, "sectorIdx": 1 },
+    { "stimulusKey": "III4e", "meridianDeg": 90,  "eccentricityDeg": 48.5, "detected": true, "sectorIdx": 2 },
+    { "stimulusKey": "III4e", "meridianDeg": 135, "eccentricityDeg": 55.0, "detected": true, "sectorIdx": 3 },
+    { "stimulusKey": "III4e", "meridianDeg": 180, "eccentricityDeg": 50.0, "detected": true, "sectorIdx": 4 },
+    { "stimulusKey": "III4e", "meridianDeg": 225, "eccentricityDeg": 53.0, "detected": true, "sectorIdx": 5 },
+    { "stimulusKey": "III4e", "meridianDeg": 270, "eccentricityDeg": 47.5, "detected": true, "sectorIdx": 6 },
+    { "stimulusKey": "III4e", "meridianDeg": 315, "eccentricityDeg": 56.0, "detected": true, "sectorIdx": 7 }
+  ],
+  "software": {
+    "name": "Visual Field Check",
+    "version": "1.0.0",
+    "url": "https://visualfieldcheck.com"
+  }
+}
