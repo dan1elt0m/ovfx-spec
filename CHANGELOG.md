@@ -16,6 +16,8 @@ Purely additive minor bump. Every 0.3.0 document is a valid 0.4.0 document after
 - `calibration.setup.screen.backgroundLuminanceCdM2` (optional) — background luminance of the screen during the test. Matches the existing `calibration.setup.bowl.backgroundLuminanceCdM2`.
 - Validator registry now includes the 0.4.0 schema; documents default to 0.4.0 when unversioned.
 - Unit tests covering every new positive and negative rule, plus a regression test asserting that 0.3.0 documents still validate under the 0.3.0 schema.
+- `points[].catchTrial` (optional boolean) — marks a point as a blindspot catch trial rather than a real sensitivity probe. Consumers MUST exclude catch-trial points from isopter and sensitivity aggregations.
+- `reliabilityIndices` (optional top-level object) — carries the four raw integer counts (`catchTrialsPresented`, `catchTrialsFalsePositive`, `falsePositiveIsiPresses`, `truePositiveResponses`) needed to derive FA% and FPRR% at display time, following the nomenclature of Dzwiniel et al. 2017 (PLoS ONE 12(10):e0186224). When present, all four fields are required; derived metrics are NOT stored in the document.
 
 ### Migration from 0.3.0
 

@@ -84,7 +84,7 @@ OVFX uses semantic versioning at the spec level. A **MAJOR** bump means a backwa
 
 The current spec version is **0.4.0 (draft)**. The format is not yet considered stable; feedback on the draft is welcome.
 
-0.4.0 is a purely additive minor bump over 0.3.0 — every 0.3.0 document is a valid 0.4.0 document after bumping `ovfxVersion`. See [`CHANGELOG.md`](CHANGELOG.md) for the full list of new optional fields.
+0.4.0 is a purely additive minor bump over 0.3.0 — every 0.3.0 document is a valid 0.4.0 document after bumping `ovfxVersion`. New optional fields in 0.4.0 include stimulus presentation timing (`stimulusDurationMs`, `interStimulusIntervalMs`), absolute luminance values (`luminanceCdM2`, `maxLuminanceCdM2`, `backgroundLuminanceCdM2`), blindspot catch-trial tagging (`points[].catchTrial`), and a top-level `reliabilityIndices` object for FA%/FPRR% computation following Dzwiniel et al. 2017. See [`CHANGELOG.md`](CHANGELOG.md) for the full list.
 
 ## Status
 

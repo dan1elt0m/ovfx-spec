@@ -274,6 +274,49 @@ test('v0.4.0 rejects zero maxLuminanceCdM2 on setup.screen (must be > 0)', async
   assert.equal(valid, false)
 })
 
+test('v0.4.0 accepts points[].catchTrial boolean', async () => {
+  const doc = baseDoc()
+  doc.points.push({ stimulusKey: 'V4e', meridianDeg: 195, eccentricityDeg: 14.5, detected: false, catchTrial: true })
+  const { valid, errors } = await validateDocument(doc)
+  assert.equal(valid, true, JSON.stringify(errors))
+})
+
+test('v0.4.0 accepts a fully-populated reliabilityIndices object', async () => {
+  const doc = baseDoc()
+  doc.reliabilityIndices = {
+    catchTrialsPresented: 10,
+    catchTrialsFalsePositive: 1,
+    falsePositiveIsiPresses: 2,
+    truePositiveResponses: 87,
+  }
+  const { valid, errors } = await validateDocument(doc)
+  assert.equal(valid, true, JSON.stringify(errors))
+})
+
+test('v0.4.0 rejects reliabilityIndices with a missing required field', async () => {
+  const doc = baseDoc()
+  doc.reliabilityIndices = {
+    catchTrialsPresented: 10,
+    catchTrialsFalsePositive: 1,
+    falsePositiveIsiPresses: 2,
+    // truePositiveResponses intentionally omitted
+  }
+  const { valid, errors } = await validateDocument(doc)
+  assert.equal(valid, false, `expected invalid, got: ${JSON.stringify(errors)}`)
+})
+
+test('v0.4.0 rejects reliabilityIndices with a negative count', async () => {
+  const doc = baseDoc()
+  doc.reliabilityIndices = {
+    catchTrialsPresented: 10,
+    catchTrialsFalsePositive: -1,
+    falsePositiveIsiPresses: 2,
+    truePositiveResponses: 87,
+  }
+  const { valid } = await validateDocument(doc)
+  assert.equal(valid, false)
+})
+
 test('a 0.3.0 document without the new 0.4.0 fields still validates under the 0.3.0 schema', async () => {
   const doc = {
     ovfxVersion: '0.3.0',

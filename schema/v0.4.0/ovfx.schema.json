@@ -181,7 +181,8 @@
           "rawEccentricityDeg": { "type": "number", "minimum": 0 },
           "responseTimeMs": { "type": "number", "minimum": 0 },
           "sectorIdx": { "type": "integer", "minimum": 0 },
-          "repeat": { "type": "boolean" }
+          "repeat": { "type": "boolean" },
+          "catchTrial": { "type": "boolean" }
         },
         "patternProperties": {
           "^_": {}
@@ -197,6 +198,34 @@
         "falseNegativeRate": { "type": "number", "minimum": 0, "maximum": 1 },
         "fixationLossRate": { "type": "number", "minimum": 0, "maximum": 1 },
         "fixationMethod": { "type": "string", "minLength": 1 }
+      }
+    },
+    "reliabilityIndices": {
+      "type": "object",
+      "description": "Raw catch-trial and fixation-reliability counts. Derived metrics (FA%, FPRR%) are computed at display time from these values. Nomenclature follows Dzwiniel et al. 2017 (PLoS ONE 12(10):e0186224).",
+      "required": ["catchTrialsPresented", "catchTrialsFalsePositive", "falsePositiveIsiPresses", "truePositiveResponses"],
+      "additionalProperties": false,
+      "properties": {
+        "catchTrialsPresented": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of blindspot catch trials presented during the test."
+        },
+        "catchTrialsFalsePositive": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Catch trials the patient reported seeing (fixation-loss signal)."
+        },
+        "falsePositiveIsiPresses": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Key presses during stimulus-absent ISI windows (trigger-happy signal)."
+        },
+        "truePositiveResponses": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Valid detections on real (non-catch) stimulus presentations."
+        }
       }
     },
     "isopters": {

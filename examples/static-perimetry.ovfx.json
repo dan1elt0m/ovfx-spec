@@ -60,8 +60,25 @@
     { "stimulusKey": "I2e",   "meridianDeg": 30,  "eccentricityDeg": 25.0, "detected": false },
     { "stimulusKey": "I2e",   "meridianDeg": 90,  "eccentricityDeg": 12.0, "detected": true,  "responseTimeMs": 488 },
     { "stimulusKey": "I2e",   "meridianDeg": 180, "eccentricityDeg": 16.0, "detected": true,  "responseTimeMs": 502 },
-    { "stimulusKey": "I2e",   "meridianDeg": 270, "eccentricityDeg": 15.5, "detected": true,  "responseTimeMs": 495 }
+    { "stimulusKey": "I2e",   "meridianDeg": 270, "eccentricityDeg": 15.5, "detected": true,  "responseTimeMs": 495 },
+
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": false, "catchTrial": true },
+    { "stimulusKey": "V4e",   "meridianDeg": 195, "eccentricityDeg": 14.5, "detected": true,  "catchTrial": true }
   ],
+  "reliabilityIndices": {
+    "catchTrialsPresented": 10,
+    "catchTrialsFalsePositive": 1,
+    "falsePositiveIsiPresses": 2,
+    "truePositiveResponses": 87
+  },
   "reliability": {
     "falsePositiveRate": 0.02,
     "falseNegativeRate": 0.05,
