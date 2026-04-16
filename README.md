@@ -1,6 +1,6 @@
 # OVFX — Open Visual Field eXchange
 
-[![Spec version](https://img.shields.io/badge/spec-v0.3.0--draft-blue)](spec/v0.3.0.md)
+[![Spec version](https://img.shields.io/badge/spec-v0.4.0--draft-blue)](spec/v0.4.0.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/spec%20license-CC%20BY%204.0-lightgrey)](LICENSE)
 [![Code license](https://img.shields.io/badge/code%20license-Apache%202.0-blue)](LICENSE-CODE)
 
@@ -22,7 +22,7 @@ OVFX fills the gap with one small, well-specified JSON schema that covers every 
 
 ```json
 {
-  "ovfxVersion": "0.3.0",
+  "ovfxVersion": "0.4.0",
   "id": "1f5b2e2c-2cd5-4d29-9c6a-83a51c4f8aaa",
   "createdAt": "2026-04-15T10:00:00Z",
   "test": {
@@ -82,7 +82,9 @@ docs/         Design rationale and supporting material
 
 OVFX uses semantic versioning at the spec level. A **MAJOR** bump means a backward-incompatible change to the schema. **MINOR** bumps add new optional fields or test types. **PATCH** bumps are clarifications and corrections that don't change the schema. Implementations should reject documents whose `ovfxVersion` is from a newer **MAJOR** than they support.
 
-The current spec version is **0.3.0 (draft)**. The format is not yet considered stable; feedback on the draft is welcome.
+The current spec version is **0.4.0 (draft)**. The format is not yet considered stable; feedback on the draft is welcome.
+
+0.4.0 is a purely additive minor bump over 0.3.0 — every 0.3.0 document is a valid 0.4.0 document after bumping `ovfxVersion`. See [`CHANGELOG.md`](CHANGELOG.md) for the full list of new optional fields.
 
 ## Status
 
@@ -90,8 +92,8 @@ OVFX is currently a **public draft**. The schema may change before 1.0.0 based o
 
 ## Get involved
 
-- Read the [specification](spec/v0.3.0.md)
-- Browse the [JSON Schema](schema/v0.3.0/ovfx.schema.json)
+- Read the [specification](spec/v0.4.0.md)
+- Browse the [JSON Schema](schema/v0.4.0/ovfx.schema.json)
 - Try the [validator CLI](tools/validate-cli/)
 - Open an [RFC issue](.github/ISSUE_TEMPLATE/) to propose a change
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before sending a PR

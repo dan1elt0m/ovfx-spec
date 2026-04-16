@@ -2,6 +2,25 @@
 
 All notable changes to OVFX are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html) at the spec level.
 
+## [0.4.0] — 2026-04-17
+
+Purely additive minor bump. Every 0.3.0 document is a valid 0.4.0 document after bumping `ovfxVersion`. Motivated by cross-device comparability: `sensitivityDb` and response-time measurements are only portable when the producing screen's luminance and the stimulus presentation timing are recorded. Inspired by the parameter set used by Specvis-Desktop and similar screen-based perimetry tools.
+
+### Added
+
+- `test.stimulusDurationMs` (optional) — how long each stimulus was presented, in milliseconds.
+- `test.interStimulusIntervalMs` (optional) — fixed minimum interval between successive stimuli, in milliseconds.
+- `test.interStimulusIntervalJitterMs` (optional) — additional random interval added on top of the fixed part.
+- `stimuli[].luminanceCdM2` (optional) — absolute luminance of a stimulus, in candelas per square metre. Enables cross-device comparison independent of the producing screen's full-brightness ceiling.
+- `calibration.setup.screen.maxLuminanceCdM2` (optional) — absolute luminance of a full-brightness stimulus on the producing screen. Defines the 0 dB reference for `points[].sensitivityDb`.
+- `calibration.setup.screen.backgroundLuminanceCdM2` (optional) — background luminance of the screen during the test. Matches the existing `calibration.setup.bowl.backgroundLuminanceCdM2`.
+- Validator registry now includes the 0.4.0 schema; documents default to 0.4.0 when unversioned.
+- Unit tests covering every new positive and negative rule, plus a regression test asserting that 0.3.0 documents still validate under the 0.3.0 schema.
+
+### Migration from 0.3.0
+
+Mechanical rewrite: bump `ovfxVersion` from `"0.3.0"` to `"0.4.0"`. Every new field is optional; existing 0.3.0 producers can ignore them.
+
 ## [0.3.0] — 2026-04-15
 
 Moves `maxEccentricityDeg` into each `setup.<type>` sub-object (it's a property of the testing hardware, not a device-agnostic measurement) and adds optional fields for clinical interoperability with DICOM Supplement 80, the visualFields R package, and clinical HFA / Octopus exports. Point data is unchanged.

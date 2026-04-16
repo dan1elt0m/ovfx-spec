@@ -1,5 +1,5 @@
 {
-  "ovfxVersion": "0.3.0",
+  "ovfxVersion": "0.4.0",
   "id": "5c8d1e2a-3f4b-4a5c-9d8e-7f6a5b4c3d2e",
   "createdAt": "2026-04-15T11:30:00Z",
   "test": {
@@ -8,7 +8,10 @@
     "extendedField": false,
     "pattern": "24-2",
     "strategy": "SITA-standard",
-    "durationSeconds": 360
+    "durationSeconds": 360,
+    "stimulusDurationMs": 200,
+    "interStimulusIntervalMs": 1500,
+    "interStimulusIntervalJitterMs": 200
   },
   "calibration": {
     "setup": {
@@ -20,16 +23,18 @@
         "screenHeightPx": 1080,
         "fixationOffsetPx": 384,
         "maxEccentricityDeg": 70,
-        "brightnessFloor": 0.04
+        "brightnessFloor": 0.04,
+        "maxLuminanceCdM2": 318.0,
+        "backgroundLuminanceCdM2": 10.0
       }
     }
   },
   "stimuli": [
-    { "key": "V4e",   "sizeDeg": 1.73, "intensity": 1.00 },
-    { "key": "III4e", "sizeDeg": 0.43, "intensity": 1.00 },
-    { "key": "III2e", "sizeDeg": 0.43, "intensity": 0.10 },
-    { "key": "I4e",   "sizeDeg": 0.11, "intensity": 1.00 },
-    { "key": "I2e",   "sizeDeg": 0.11, "intensity": 0.10 }
+    { "key": "V4e",   "sizeDeg": 1.73, "intensity": 1.00, "luminanceCdM2": 318.0 },
+    { "key": "III4e", "sizeDeg": 0.43, "intensity": 1.00, "luminanceCdM2": 318.0 },
+    { "key": "III2e", "sizeDeg": 0.43, "intensity": 0.10, "luminanceCdM2": 31.8 },
+    { "key": "I4e",   "sizeDeg": 0.11, "intensity": 1.00, "luminanceCdM2": 318.0 },
+    { "key": "I2e",   "sizeDeg": 0.11, "intensity": 0.10, "luminanceCdM2": 31.8 }
   ],
   "points": [
     { "stimulusKey": "V4e", "meridianDeg": 15,  "eccentricityDeg": 65.0, "detected": true,  "responseTimeMs": 410, "sensitivityDb": 28 },

@@ -18,11 +18,12 @@ const __dirname = dirname(__filename)
 // the schema matching a document's `ovfxVersion` field. New versions are added
 // here when they are released.
 const SCHEMAS = {
+  '0.4': resolve(__dirname, '..', '..', 'schema', 'v0.4.0', 'ovfx.schema.json'),
   '0.3': resolve(__dirname, '..', '..', 'schema', 'v0.3.0', 'ovfx.schema.json'),
   '0.2': resolve(__dirname, '..', '..', 'schema', 'v0.2.0', 'ovfx.schema.json'),
   '0.1': resolve(__dirname, '..', '..', 'schema', 'v0.1.0', 'ovfx.schema.json'),
 }
-const DEFAULT_SCHEMA = SCHEMAS['0.3']
+const DEFAULT_SCHEMA = SCHEMAS['0.4']
 
 export async function loadSchemaFor(ovfxVersion) {
   if (typeof ovfxVersion !== 'string') return DEFAULT_SCHEMA
